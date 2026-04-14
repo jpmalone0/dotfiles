@@ -1,0 +1,23 @@
+# Ignore machine-specific local files
+*_local
+.private*
+.secret*
+
+# Ignore environment variable files
+.env
+.env.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific temporary files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Shell history (if accidentally copied)
+.zsh_history
+.bash_history
