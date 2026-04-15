@@ -5,4 +5,9 @@
     "autoCompactAt": 0.6
   },
   "thinkingTokenLimit": 8000
+
+  "permissions": {
+    "deny": ["Bash(rm:*)", "Bash(rmdir:*)"],
+    "defaultMode": "bypassPermissions"
+  }
 }
