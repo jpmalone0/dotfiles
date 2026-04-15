@@ -1,0 +1,8 @@
+{
+  "tokenBudget": {
+    "sessionLimit": 500000,
+    "dailyLimit": 2000000,
+    "autoCompactAt": 0.6
+  },
+  "thinkingTokenLimit": 8000
+}
