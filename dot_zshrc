@@ -155,4 +155,26 @@ uvnew() {
   echo 'source .venv/bin/activate' > .envrc
   direnv allow
 
-  [[ -f ~/.zsh_local ]] && source ~/.zsh_local
+  # Add ruff and mypy config to pyproject.toml
+  cat >> pyproject.toml << 'EOF'
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["E501", "B008"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+EOF
+
+  echo "Added ruff and mypy config to pyproject.toml"
+
+}
+
+alias vim="nvim"
+[[ -f ~/.zsh_local ]] && source ~/.zsh_local
+export PATH="$HOME/.local/bin:$PATH"
